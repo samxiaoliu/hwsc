@@ -1,98 +1,262 @@
-// 变量 $+变量名
-$w:400px;
-$h:200px;
-$c:red;
-$len:50%*10; // 500%
-/* 标题样式 */
-h1{
-  width: $w;
-  height: $h;
-  color: $c;
-  background-color: #ccc;
+.container {
+    height: 36px;
+    background: #2e2828;
 }
 
-// sass中的注释有两种
-// 1. // sass有的注释，不会被编译到css文件中
-// /* xxx */ 会被编译到css文件中
+@mixin navIcon($x, $y) {
+    content: '';
+    background: url('../img/icon-common.svg') no-repeat;
+    position: absolute;
+    top: 10px;
+    right: 5px;
+    display: block;
+    width: 14px;
+    height: 14px;
+    background-position: $x $y;
+}
 
-// 嵌套语法
-.box{
-  width: $w;
-  background-color: lightblue;
-  h2{
-    font-size: 30px;
-    color: blue;
-  }
-  .show{
-    width: 300px;
-    height: 100px;
-    span{
-      color: red;
+#nav {
+    width: 1200px;
+    height: 36px;
+    background: #2e2828;
+    margin: 0 auto;
+    .nav_left {
+        float: left;
+        span {
+            float: left;
+            display: block;
+            padding: 0 8px;
+            position: relative;
+            a {
+                color: #afafaf;
+                font-size: 12px;
+                height: 36px;
+                line-height: 36px;
+                cursor: pointer;
+            }
+            a:hover {
+                color: white;
+            }
+            a:before {
+                content: '';
+                width: 1px;
+                height: 10px;
+                background: #414141;
+                position: absolute;
+                top: 13px;
+                left: 0;
+                display: block;
+            }
+        }
+        .borderless:before {
+            display: none;
+        }
+        .arrow {
+            padding-right: 10px;
+        }
+        .arrow a {
+            padding-right: 15px;
+        }
+        .arrow i {
+            @include navIcon(-71px,
+            0);
+        }
+        .arrow:hover i {
+            @include navIcon(-85px,
+            0);
+        }
+        .arrow:hover {
+            background: white;
+        }
+        .arrow:hover a {
+            color: red;
+            padding-right: 15px;
+        }
+        .arrow:hover a:before {
+            display: none;
+        }
     }
-    p{
-      color: yellow;
+    .nav_right {
+        float: right;
+        span {
+            float: left;
+            display: block;
+            padding: 0 8px;
+            position: relative;
+            a {
+                color: #afafaf;
+                font-size: 12px;
+                height: 36px;
+                line-height: 36px;
+                cursor: pointer;
+            }
+            a:hover {
+                color: white;
+            }
+            a:before {
+                content: '';
+                width: 1px;
+                height: 10px;
+                background: #414141;
+                position: absolute;
+                top: 13px;
+                left: 0;
+                display: block;
+            }
+        }
+        .borderless:before {
+            display: none;
+        }
+        .arrow {
+            padding-right: 10px;
+        }
+        .cart {
+            padding-left: 10px;
+        }
+        .arrow a {
+            padding-right: 15px;
+        }
+        .cart a {
+            padding-left: 15px;
+        }
+        .arrow i {
+            @include navIcon(-71px,
+            0);
+        }
+        .arrow:hover i {
+            @include navIcon(-85px,
+            0);
+        }
+        .arrow:hover,
+        .cart:hover {
+            background: white;
+        }
+        .arrow:hover a,
+        .cart:hover a {
+            color: red;
+        }
+        .arrow:hover a:before,
+        .cart:hover a:before {
+            display: none;
+        }
+        .cart i {
+            @include navIcon(-96px,
+            0);
+            width: 20px;
+            height: 20px;
+            top: 7px;
+            left: 0;
+        }
+        .cart:hover i {
+            @include navIcon(-115px,
+            0);
+            width: 20px;
+            height: 20px;
+            top: 7px;
+            left: 0;
+        }
     }
-  }
 }
 
-// & 指向父选择器
-a{
-  color: blue;
-  &:hover{
-    color: red;
-  }
-}
-.content{
-  width: 500px;
-  &-title{
-    color: red;
-  }
-  &-main{
-    color: blue;
-  }
+.container2 {
+    height: 74px;
+    background: white;
 }
 
-// @import 引入外部样式
-@import 'header.scss';
+#search {
+    height: 41px;
+    padding: 18px 0;
+    width: 1200px;
+    margin: 0 auto;
+    #search_left {
+        float: left;
+        a {
+            display: inline-block;
+            height: 100%;
+            line-height: 41px;
+            font-size: 16px;
+        }
+        .logo {
+            width: 205px;
+            height: 36px;
+            margin-right: 34px;
+        }
+        .a {
+            width: 74px;
+            margin-right: 20px;
+            vertical-align: middle;
+        }
+        .word {
+            margin-right: 24px;
+        }
+        .word:hover {
+            color: red;
+        }
+    }
+    #search_right {
+        float: right;
+        position: relative;
+        .input_a1 {
+            position: absolute;
+            top: 10px;
+            right: 100px;
+        }
+        .input_a2 {
+            position: absolute;
+            top: 10px;
+            right: 50px;
+        }
+        .input_a1:hover,
+        .input_a2:hover {
+            color: black;
+        }
+        input {
+            width: 205px;
+            height: 30px;
+            line-height: 41px;
+            border-radius: 15px;
+            background: #eee;
+            padding-left: 20px;
+            color: black;
+            padding-right: 32px;
+        }
+        input:focus+.input_a1 {
+            display: none;
+        }
+        input:focus+.input_a1+.input_a2 {
+            display: none;
+        }
+        i {
+            @include navIcon(-140px,
+            0);
+            width: 20px;
+            height: 20px;
+            top: 5px;
+            right: 10px;
+        }
+    }
+    #search_right:hover {
+        input {
+            border: 1px solid #ccc;
+        }
+        i {
+            @include navIcon(-160px,
+            0);
+            width: 20px;
+            height: 20px;
+            top: 5px;
+            right: 10px;
+        }
+    }
+}
 
-// @mixin 混合器
-@mixin nostyle {
-  list-style: none;
-  li{
-    padding: 0;
-    color: blue;
-  }
+#banner {
+    width: 1522px;
+    height: 550px;
+    // margin: 0 auto;
+    // text-align: center;
+    // overflow: hidden;
+    background: url('../img/banner1.jpg') no-repeat center;
+    // background-position: 0 0;
+    // background-size: cover;
 }
-.list{
-  width: 500px;
-  @include nostyle;
-}
-
-// 混合器传参
-@mixin common($w,$h,$c) {
-  width: $w;
-  height: $h;
-  color: $c;
-}
-.box1{
-  background-color: #ccc;
-  @include common(500px,200px,red);
-}
-.box2{
-  padding: 10px;
-  @include common(300px,100px,blue);
-}
-
-// 继承
-.box3{
-  padding: 20px;
-  margin: 10px;
-  font-size: 20px;
-}
-.box4{
-  width: 500px;
-  background: pink;
-  @extend .box3;
-}
-
-
