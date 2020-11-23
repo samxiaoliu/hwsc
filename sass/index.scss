@@ -1,8 +1,3 @@
-.container {
-    height: 36px;
-    background: #2e2828;
-}
-
 @mixin navIcon($x, $y) {
     content: '';
     background: url('../img/icon-common.svg') no-repeat;
@@ -26,149 +21,6 @@ $y) {
     width: 40px;
     height: 40px;
     background-position: $x $y;
-}
-
-#nav {
-    width: 1200px;
-    height: 36px;
-    background: #2e2828;
-    margin: 0 auto;
-    .nav_left {
-        float: left;
-        span {
-            float: left;
-            display: block;
-            padding: 0 8px;
-            position: relative;
-            a {
-                color: #afafaf;
-                font-size: 12px;
-                height: 36px;
-                line-height: 36px;
-                cursor: pointer;
-            }
-            a:hover {
-                color: white;
-            }
-            a:before {
-                content: '';
-                width: 1px;
-                height: 10px;
-                background: #414141;
-                position: absolute;
-                top: 13px;
-                left: 0;
-                display: block;
-            }
-        }
-        .borderless:before {
-            display: none;
-        }
-        .arrow {
-            padding-right: 10px;
-        }
-        .arrow a {
-            padding-right: 15px;
-        }
-        .arrow i {
-            @include navIcon(-71px,
-            0);
-        }
-        .arrow:hover i {
-            @include navIcon(-85px,
-            0);
-        }
-        .arrow:hover {
-            background: white;
-        }
-        .arrow:hover a {
-            color: red;
-            padding-right: 15px;
-        }
-        .arrow:hover a:before {
-            display: none;
-        }
-    }
-    .nav_right {
-        float: right;
-        span {
-            float: left;
-            display: block;
-            padding: 0 8px;
-            position: relative;
-            a {
-                color: #afafaf;
-                font-size: 12px;
-                height: 36px;
-                line-height: 36px;
-                cursor: pointer;
-            }
-            a:hover {
-                color: white;
-            }
-            a:before {
-                content: '';
-                width: 1px;
-                height: 10px;
-                background: #414141;
-                position: absolute;
-                top: 13px;
-                left: 0;
-                display: block;
-            }
-        }
-        .borderless:before {
-            display: none;
-        }
-        .arrow {
-            padding-right: 10px;
-        }
-        .cart {
-            padding-left: 10px;
-        }
-        .arrow a {
-            padding-right: 15px;
-        }
-        .cart a {
-            padding-left: 15px;
-        }
-        .arrow i {
-            @include navIcon(-71px,
-            0);
-        }
-        .arrow:hover i {
-            @include navIcon(-85px,
-            0);
-        }
-        .arrow:hover,
-        .cart:hover {
-            background: white;
-        }
-        .arrow:hover a,
-        .cart:hover a {
-            color: red;
-        }
-        .arrow:hover a:before,
-        .cart:hover a:before {
-            display: none;
-        }
-        .cart i {
-            @include navIcon(-96px,
-            0);
-            width: 20px;
-            height: 20px;
-            top: 7px;
-            left: 0;
-        }
-        .cart:hover i {
-            @include navIcon(-115px,
-            0);
-            width: 20px;
-            height: 20px;
-            top: 7px;
-            left: 0;
-        }
-    }
 }
 
 .container2 {
@@ -265,110 +117,450 @@ $y) {
 
 #banner {
     height: 550px;
-    background: url('../img/banner5.jpg') no-repeat center;
-}
-
-#footer {
-    margin-top: 20px;
-    height: 407px;
-    background: #f9f9f9;
-    .footer_inner {
+    background: url('../img/banner12.png') no-repeat center;
+    border: 1px solid transparent;
+    .banner_inner {
         width: 1200px;
-        height: 407px;
-        background: #f9f9f9;
         margin: 0 auto;
-        border: 1px solid transparent;
-        .footer_top {
-            display: flex;
-            justify-content: space-between;
-            margin: 20px 0;
-            height: 40px;
-            li {
-                width: 17%;
-                position: relative;
-                padding-left: 50px;
-                font-size: 18px;
-                line-height: 40px;
-                color: #3a3a3a;
-                cursor: pointer;
-            }
-            .icon1_1 i {
-                @include footerIcon(-74px,
-                0)
-            }
-            .icon1_2 i {
-                @include footerIcon(-114px,
-                0)
-            }
-            .icon1_3 i {
-                @include footerIcon(-154px,
-                0)
-            }
-            .icon1_4 i {
-                @include footerIcon(-194px,
-                0)
+    }
+    .good_list {
+        width: 200px;
+        height: 440px;
+        position: relative;
+        background: rgba(255, 255, 255, 0.95);
+        margin-top: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 28px rgba(0, 0, 0, 0.08);
+        li {
+            height: 10%;
+            line-height: 44px;
+            font-size: 16px;
+            color: #848484;
+            text-align: left;
+            margin-left: 16px;
+            cursor: pointer;
+            position: relative;
+            i {
+                @include footerIcon(-363px,
+                0);
+                width: 16px;
+                height: 16px;
+                top: 14px;
+                right: 10px;
+                left: unset;
             }
         }
-        .footer_middle {
-            display: flex;
-            justify-content: space-between;
-            padding: 24px 0;
-            border: 1px solid rgb(229, 229, 229);
-            border-right: none;
-            border-left: none;
-            ul {
-                width: 13.33%;
-                li {
-                    font-size: 10px;
-                    color: #777;
-                    line-height: 1.4rem;
-                }
-                li:nth-of-type(1) {
-                    font-size: 14px;
+        li:hover {
+            background: white;
+        }
+    }
+    .specific_good_list {
+        height: 440px;
+        background: white;
+        position: absolute;
+        left: 184px;
+        top: 0;
+        padding: 10px;
+        li {
+            float: left;
+            height: 20%;
+            position: relative;
+            img {
+                float: left;
+                height: 100%;
+            }
+            span {
+                float: left;
+                font-size: 14px;
+                // display: inline-block;
+                // float: left;
+            }
+        }
+    }
+}
+
+.mask {
+    margin-top: -40px;
+    display: block;
+    height: 72px;
+    img {
+        width: 100%;
+    }
+}
+
+#login {
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    width: 1200px;
+    height: 88px;
+    margin: 0 auto;
+    margin-top: -80px;
+    background: white;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 26px rgba(0, 0, 0, 0.07);
+    .login_form {
+        padding-left: 26px;
+        width: 20%;
+        display: flex;
+        height: 52px;
+        margin-top: 18px;
+        border-right: 1px solid #eee;
+        img {
+            height: 100%;
+        }
+        .login_form_right {
+            float: left;
+            margin-top: 5px;
+            p {
+                font-size: 14px;
+                color: #999;
+                .login {
                     color: black;
-                    margin-bottom: 10px;
+                }
+                .signin {
+                    color: black;
                 }
             }
-            ul:nth-last-of-type(1) {
-                width: 278px;
-                border-left: 1px solid rgb(229, 229, 229);
-                .tel {
-                    font-size: 24px;
-                    font-weight: bolder;
-                    color: rgb(87, 87, 87);
-                    height: 36px;
-                    line-height: 36px;
+            .login_form_bottom {
+                display: flex;
+                p:nth-of-type(1) {
+                    border: 1px solid #de5b60;
+                    width: 68px;
+                    height: 20px;
                     text-align: center;
-                    margin-bottom: 0;
+                    line-height: 20px;
+                    border-radius: 5px;
+                    color: #de5b60;
+                    font-size: 13px;
+                    margin: 8px 12px 0 12px;
                 }
-                .tel_content {
+                p:nth-of-type(2) {
+                    width: 68px;
+                    height: 22px;
                     text-align: center;
-                    font-size: 14px;
+                    line-height: 22px;
+                    background: #595454;
+                    color: #fde4b3;
+                    border-radius: 5px;
+                    font-size: 13x;
+                    margin: 8px 0px 0 0px;
                 }
-                .tel_button {
-                    width: 170px;
-                    height: 34px;
-                    line-height: 34px;
-                    border: 1px solid #333;
-                    background: #333;
-                    border-radius: 17px;
-                    font-size: 14px;
-                    color: white;
-                    text-align: center;
+            }
+        }
+    }
+    .login_list {
+        width: 55%;
+        ul {
+            display: flex;
+            justify-content: space-around;
+            li {
+                width: 9%;
+                text-align: center;
+                overflow: hidden;
+                position: relative;
+                div {
                     position: relative;
+                    width: 40px;
+                    height: 40px;
                     margin: 0 auto;
-                    padding-left: 10px;
-                    i {
-                        @include navIcon(-38px,
-                        -75px);
-                        top: 0;
-                        left: 25px;
-                        width: 21px;
-                        height: 21px;
-                        color: white;
+                    overflow: hidden;
+                    margin-bottom: 5px;
+                    margin-top: 15px;
+                    .img_1 {
+                        height: 100%;
+                        position: absolute;
+                        left: 0px;
+                    }
+                    .img_2 {
+                        height: 100%;
+                        position: absolute;
+                        left: -40px;
+                    }
+                    .img_3 {
+                        height: 100%;
+                        position: absolute;
+                        left: -80px;
+                    }
+                    .img_4 {
+                        height: 100%;
+                        position: absolute;
+                        left: -120px;
+                    }
+                    .img_5 {
+                        height: 100%;
+                        position: absolute;
+                        left: -160px;
+                    }
+                    .img_6 {
+                        height: 100%;
+                        position: absolute;
+                        left: -200px;
                     }
                 }
             }
         }
+    }
+    .login_right {
+        width: 25%;
+        height: 100%;
+        border-left: 1px solid #eee;
+        .gg {
+            height: 43px;
+            line-height: 43px;
+            color: black;
+            font-size: 16px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+            padding-left: 10px;
+        }
+        .right_list {
+            height: 42px;
+            display: flex;
+            justify-content: space-around;
+            span {
+                line-height: 42px;
+                font-size: 12px;
+                height: 42px;
+                display: flex;
+                div {
+                    width: 20px;
+                    height: 20px;
+                    position: relative;
+                    overflow: hidden;
+                    margin: 0 auto;
+                    margin-top: 11px;
+                    margin-right: 3px;
+                    .img_code_1 {
+                        width: 300px;
+                        height: 40px;
+                        position: absolute;
+                        left: -240px;
+                    }
+                    .img_code_2 {
+                        width: 300px;
+                        height: 40px;
+                        position: absolute;
+                        left: -260px;
+                    }
+                    .img_code_3 {
+                        width: 300px;
+                        height: 40px;
+                        position: absolute;
+                        left: -280px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#top_phone_list {
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    height: 200px;
+    margin-top: 20px;
+    li {
+        height: 100%;
+        border-radius: 10px;
+        cursor: pointer;
+        img {
+            height: 100%;
+            border-radius: 10px;
+        }
+    }
+    li:hover {
+        box-shadow: 0px 12px 36px rgba(0, 0, 0, 0.1);
+        transition: box-shadow 0.3s;
+    }
+}
+
+.hot_product {
+    width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    .tag {
+        font-size: 26px;
+        color: #333;
+        padding: 27px 0 13px 0;
+    }
+    .hot_left {
+        width: 230px;
+        height: 592px;
+        float: left;
+        cursor: pointer;
+        img {
+            width: 100%;
+        }
+    }
+    .hot_left:hover {
+        box-shadow: 0px 12px 36px rgba(0, 0, 0, 0.1);
+        transition: box-shadow 0.4s;
+    }
+    .hot_right {
+        float: left;
+        width: 968px;
+        li {
+            float: left;
+            text-align: center;
+            width: 230px;
+            background: #f9f9f9;
+            border-radius: 10px;
+            margin-left: 12px;
+            margin-bottom: 12px;
+            margin-top: 0;
+            padding-bottom: 25px;
+            cursor: pointer;
+            .title {
+                display: inline-block;
+                padding: 0 9px;
+                margin: 0 auto;
+                height: 22px;
+                line-height: 22px;
+                color: #fff;
+                border-radius: 0 0 6px 6px;
+                background: #FF6A6E;
+            }
+            img {
+                width: 150px;
+                height: 150px;
+                display: block;
+                margin: 13px auto 0;
+            }
+            .name {
+                width: 210px;
+                display: block;
+                margin: 0 auto;
+                padding: 0;
+                margin-top: 12px;
+                height: 21px;
+                line-height: 21px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                font-size: 14px;
+            }
+            .feature {
+                color: #777;
+                line-height: 18px;
+                padding: 0 10px;
+                margin: 2px 20px 7px;
+                font-size: 14px;
+            }
+            .price {
+                color: #d0021b;
+                line-height: 21px;
+                margin-bottom: 0;
+                font-size: 14px;
+            }
+        }
+        li:hover {
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.4s;
+        }
+    }
+}
+
+.contact_list {
+    width: 38px;
+    position: fixed;
+    bottom: 50px;
+    right: 0;
+    li {
+        width: 38px;
+        height: 38px;
+        background: white;
+        position: relative;
+        p {
+            display: none;
+            font-size: 12px;
+            position: absolute;
+            right: 45px;
+            top: 0;
+            height: 38px;
+            line-height: 38px;
+            width: 70px;
+            background: white;
+            text-align: center;
+        }
+    }
+    .cart i {
+        @include navIcon(0,
+        -75px);
+        top: unset;
+        right: unset;
+        width: 38px;
+        height: 38px;
+    }
+    .cart:hover i {
+        @include navIcon(0,
+        -37px);
+        top: unset;
+        right: unset;
+        width: 38px;
+        height: 38px;
+    }
+    .cart:hover p {
+        display: block;
+    }
+    .customer i {
+        @include navIcon(-38px,
+        -75px);
+        top: unset;
+        right: unset;
+        width: 38px;
+        height: 38px;
+    }
+    .customer:hover i {
+        @include navIcon(-38px,
+        -37px);
+        top: unset;
+        right: unset;
+        width: 38px;
+        height: 38px;
+    }
+    .customer:hover p {
+        display: block;
+    }
+    .help i {
+        @include navIcon(-76px,
+        -75px);
+        top: unset;
+        right: unset;
+        width: 38px;
+        height: 38px;
+    }
+    .help:hover i {
+        @include navIcon(-76px,
+        -37px);
+        top: unset;
+        right: unset;
+        width: 38px;
+        height: 38px;
+    }
+    .help:hover p {
+        display: block;
+    }
+    .back_top i {
+        @include navIcon(-114px,
+        -75px);
+        top: unset;
+        right: unset;
+        width: 38px;
+        height: 38px;
+    }
+    .back_top:hover i {
+        @include navIcon(-114px,
+        -37px);
+        top: unset;
+        right: unset;
+        width: 38px;
+        height: 38px;
+    }
+    .back_top:hover p {
+        display: block;
     }
 }

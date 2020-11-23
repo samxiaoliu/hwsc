@@ -5,81 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/reset.css">
-    <!-- <link rel="stylesheet" href=""> -->
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/footer.css">
 </head>
 
 <body>
-    <div class="container">
-        <div id="nav">
-            <div class="nav_left">
-                <span>
-                  <a href="#" class="borderless">首页</a>
-                </span>
-                <span>
-                  <a href="#">华为官网</a>
-                </span>
-                <span>
-                  <a href="#">荣耀官网</a>
-                </span>
-                <span>
-                  <a href="#">花粉俱乐部</a>
-                </span>
-                <span>
-                  <a href="#">V码(优购码)</a>
-                </span>
-                <span>
-                  <a href="#">企业购</a>
-                </span>
-                <span>
-                  <a href="#">Select Region</a>
-                </span>
-                <span class="arrow">
-                  <a href="#">
-                    更多精彩
-                    <i></i>
-                  </a>
-                </span>
-            </div>
-
-            <div class="nav_right">
-
-                <span>
-                <a href="#" class="borderless">请登录</a>
-              </span>
-                <span>
-                <a href="#" class="borderless">注册</a>
-              </span>
-
-                <span>
-                <a href="#">我的订单</a>
-              </span>
-                <span class="arrow">
-                <a href="#">
-                  客户服务
-                  <i></i>
-                </a>
-              </span>
-                <span class="arrow">
-                <a href="#" >
-                  网站导航
-                  <i></i>
-                </a>
-              </span>
-                <span class="arrow">
-                <a href="#" >
-                  手机版
-                  <i></i>
-                </a>
-              </span>
-                <span class="cart">
-                  <i></i>
-                <a href="#">购物车(0)</a>
-              </span>
-            </div>
-        </div>
-    </div>
+    <div id="header"></div>
 
     <div class="container2">
         <div id="search">
@@ -114,101 +48,278 @@
     </div>
 
     <div id="banner">
-        <ul>
-            <li>
-                <a href="">
+        <div class="banner_inner">
+            <ul class="good_list">
+                <li>手机
+                    <i></i>
 
-                </a>
-            </li>
-        </ul>
-        <!-- <img src="../img/banner1.jpg" alt=""> -->
-    </div>
-
-
-
-
-
-
-
-
-
-
-
-    <div id="footer">
-        <div class="footer_inner">
-            <ul class="footer_top">
-                <li class="icon1_1"><i></i> 百强企业 品质保障</li>
-                <li class="icon1_2"><i></i>7天退货 15天换货</li>
-                <li class="icon1_3"><i></i>48元起免运费</li>
-                <li class="icon1_4"><i></i>2000家服务店 全国联保</li>
+                </li>
+                <li>笔记本
+                    <i></i>
+                </li>
+                <li>平板
+                    <i></i>
+                </li>
+                <li>智能穿戴&VR
+                    <i></i>
+                </li>
+                <li>智能家居
+                    <i></i>
+                </li>
+                <li>智慧屏
+                    <i></i>
+                </li>
+                <li>耳机音箱
+                    <i></i>
+                </li>
+                <li>配件
+                    <i></i>
+                </li>
+                <li>生态产品
+                    <i></i>
+                </li>
+                <li>增值服务&其他
+                    <i></i>
+                </li>
             </ul>
 
-            <div class="footer_middle">
-                <ul>
-                    <li>购物相关</li>
-                    <li>购物指南</li>
-                    <li>配送方式</li>
-                    <li>支付方式</li>
-                    <li>常见问题</li>
-                </ul>
+            <!-- <ul class="specific_good_list">
+                <li>
+                    <img src="../img/phone.png" alt="">
+                    <span>华为Mate 系列</span>
+                </li>
+                <li>
+                    <img src="../img/phone.png" alt="">
+                    <span>Mate40</span>
+                </li>
+                <li>
+                    <img src="../img/phone.png" alt="">
+                    <span>Mate40</span>
+                </li>
+                <li>
+                    <img src="../img/phone.png" alt="">
+                    <span>Mate40</span>
+                </li>
+                <li>
+                    <img src="../img/phone.png" alt="">
+                    <span>Mate40</span>
+                </li>
+                <li>
+                    <img src="../img/phone.png" alt="">
+                    <span>Mate40</span>
+                </li>
+            </ul> -->
+        </div>
+    </div>
 
-                <ul>
-                    <li>保修与退换货</li>
-                    <li>保修政策</li>
-                    <li>退换货流程</li>
-                    <li>退换货流程</li>
-                    <li>保修状态查询</li>
-                    <li>配件防伪查询</li>
-                </ul>
+    <span class="mask">
+      <img src="../img/mask.png" alt="">
+    </span>
 
-                <ul>
-                    <li>维修与技术支持</li>
-                    <li>服务店</li>
-                    <li>预约维修</li>
-                    <li>手机寄修</li>
-                    <li>备件价格查询</li>
-                    <li>上门服务</li>
-                </ul>
+    <div id="login">
+        <div class="login_form">
+            <img src="../img/user.png" alt="">
+            <div class="login_form_right">
+                <p>您好! 请 <span class="login">登录</span> / <span class="signin">注册</span></p>
+                <div class="login_form_bottom">
+                    <p>新人福利</p>
+                    <p>会员频道</p>
+                </div>
+            </div>
+        </div>
+        <div class="login_list">
+            <ul>
+                <li>
+                    <div>
+                        <img src="../img/login_list.png" alt="" class="img_1">
+                    </div>
 
-                <ul>
-                    <li>特色服务</li>
-                    <li>防伪查询</li>
-                    <li>补购保障</li>
-                    <li>以旧换新</li>
-                    <li>礼品包装</li>
-                </ul>
+                    <span>企业购特惠</span>
+                </li>
+                <li>
+                    <div>
+                        <img src="../img/login_list.png" alt="" class="img_2">
+                    </div>
 
-                <ul>
-                    <li>关于我们</li>
-                    <li>公司介绍</li>
-                    <li>华为商城简介</li>
-                    <li>华为零售店</li>
-                    <li>荣耀零售店</li>
-                    <li>商家中心</li>
-                    <li>意见反馈</li>
-                </ul>
+                    <span>会员领券</span>
+                </li>
+                <li>
+                    <div>
+                        <img src="../img/login_list.png" alt="" class="img_3">
+                    </div>
 
-                <ul>
-                    <li>友情链接</li>
-                    <li>华为集团</li>
-                    <li>华为CBG官网</li>
-                    <li>荣耀官网</li>
-                    <li>花粉俱乐部</li>
-                    <li>华为云</li>
-                </ul>
+                    <span>以旧换新</span>
+                </li>
+                <li>
+                    <div>
+                        <img src="../img/login_list.png" alt="" class="img_4">
+                    </div>
 
-                <ul>
-                    <li class="tel">950805</li>
-                    <li class="tel_content">7x24小时客服热线（仅收市话费）</li>
-                    <li class="tel_button">
-                        <i></i> 在线客服
-                    </li>
-                    <li class="info_group">关注Vmall: </li>
-                </ul>
+                    <span>Mate 40系列</span>
+                </li>
+                <li>
+                    <div>
+                        <img src="../img/login_list.png" alt="" class="img_5">
+                    </div>
+
+                    <span>华为数码</span>
+                </li>
+                <li>
+                    <div>
+                        <img src="../img/login_list.png" alt="" class="img_6">
+                    </div>
+
+                    <span>荣耀数码</span>
+                </li>
+
+            </ul>
+        </div>
+        <div class="login_right">
+            <p class="gg">公告</p>
+            <div class="right_list">
+                <span>
+                  <div>
+                    <img src="../img/login_list.png" class="img_code_1">
+                  </div>
+              
+              优购码
+            </span>
+                <span>
+                  <div>
+                    <img src="../img/login_list.png" class="img_code_2">
+                  </div>
+              更换电池
+            </span>
+                <span>
+                  <div>
+                    <img src="../img/login_list.png" class="img_code_3">
+                  </div>
+              补购保障
+            </span>
             </div>
         </div>
     </div>
+
+    <ul id="top_phone_list">
+        <li>
+            <img src="../img/lg_phone.png" alt="">
+        </li>
+        <li>
+            <img src="../img/lg_phone.png" alt="">
+        </li>
+        <li>
+            <img src="../img/lg_phone.png" alt="">
+        </li>
+        <li>
+            <img src="../img/lg_phone.png" alt="">
+        </li>
+    </ul>
+
+    <div class="hot_product">
+        <p class="tag">热销单品</p>
+        <div class="hot_left">
+            <img src="../img/hot_left.png" alt="">
+        </div>
+        <ul class="hot_right">
+            <li>
+                <span class="title">新品上市</span>
+                <img src="../img/hot_right.png" alt="">
+                <p class="name">HUAWEl Mate 40 Pro+ 5G</p>
+                <p class="feature">享多重权益</p>
+                <p class="price">￥8999</p>
+            </li>
+
+            <li>
+                <span class="title">新品上市</span>
+                <img src="../img/hot_right.png" alt="">
+                <p class="name">HUAWEl Mate 40 Pro+ 5G</p>
+                <p class="feature">享多重权益</p>
+                <p class="price">￥8999</p>
+            </li>
+
+            <li>
+                <span class="title">新品上市</span>
+                <img src="../img/hot_right.png" alt="">
+                <p class="name">HUAWEl Mate 40 Pro+ 5G</p>
+                <p class="feature">享多重权益</p>
+                <p class="price">￥8999</p>
+            </li>
+
+            <li>
+                <span class="title">新品上市</span>
+                <img src="../img/hot_right.png" alt="">
+                <p class="name">HUAWEl Mate 40 Pro+ 5G</p>
+                <p class="feature">享多重权益</p>
+                <p class="price">￥8999</p>
+            </li>
+
+            <li>
+                <span class="title">新品上市</span>
+                <img src="../img/hot_right.png" alt="">
+                <p class="name">HUAWEl Mate 40 Pro+ 5G</p>
+                <p class="feature">享多重权益</p>
+                <p class="price">￥8999</p>
+            </li>
+
+            <li>
+                <span class="title">新品上市</span>
+                <img src="../img/hot_right.png" alt="">
+                <p class="name">HUAWEl Mate 40 Pro+ 5G</p>
+                <p class="feature">享多重权益</p>
+                <p class="price">￥8999</p>
+            </li>
+
+            <li>
+                <span class="title">新品上市</span>
+                <img src="../img/hot_right.png" alt="">
+                <p class="name">HUAWEl Mate 40 Pro+ 5G</p>
+                <p class="feature">享多重权益</p>
+                <p class="price">￥8999</p>
+            </li>
+
+            <li>
+                <span class="title">新品上市</span>
+                <img src="../img/hot_right.png" alt="">
+                <p class="name">HUAWEl Mate 40 Pro+ 5G</p>
+                <p class="feature">享多重权益</p>
+                <p class="price">￥8999</p>
+            </li>
+        </ul>
+    </div>
+
+
+
+
+
+    <ul class="contact_list">
+        <li class="cart">
+            <p>购物车</p>
+            <i></i>
+        </li>
+        <li class="customer">
+            <p>在线客服</p>
+            <i></i>
+        </li>
+        <li class="help">
+            <p>自助服务</p>
+            <i></i>
+        </li>
+        <li class="back_top">
+            <p>返回顶部</p>
+            <i></i>
+        </li>
+    </ul>
+
+    <div class="footer_div"></div>
+
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
     <script src="./js/index.js"></script>
+    <script>
+        $(function() {
+            $('#header').load('header.html')
+            $('.footer_div').load('footer.html')
+        })
+    </script>
 </body>
 
 </html>

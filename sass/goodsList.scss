@@ -1,0 +1,97 @@
+#main {
+    min-width: 1200px;
+    background: #f9f9f9;
+    .main_wrap {
+        font-size: 12px;
+        p {
+            padding: 15px 0;
+            i {
+                display: inline-block;
+                margin: 0 10px;
+            }
+        }
+        .main_list {
+            padding: 5px 20px;
+            background-color: #fff;
+            span {
+                display: block;
+                height: 35px;
+                line-height: 35px;
+                border-bottom: 1px solid #eee;
+                color: #666;
+                a {
+                    color: #333;
+                }
+                .a1 {
+                    margin-left: 100px;
+                }
+                .a2 {
+                    margin-left: 76px;
+                }
+            }
+            .last {
+                i {
+                    display: inline-block;
+                    margin-left: 40px;
+                }
+                a {
+                    display: inline-block;
+                    margin: 0 20px;
+                }
+            }
+            & span:nth-last-child(1) {
+                border: 0;
+            }
+            span a:hover {
+                color: #cf0a2c;
+            }
+        }
+        .main2_list {
+            display: flex;
+            flex-wrap: wrap;
+            width: 968px;
+            margin-top: 20px;
+            li {
+                margin-left: 12px;
+                background-color: #fff;
+                width: 230px;
+                height: 290px;
+                text-align: center;
+                font-size: 14px;
+                line-height: 26px;
+                color: #666;
+                margin-bottom: 12px;
+                padding-bottom: 10px;
+                box-shadow: 0 5px 20px #eee;
+                img {
+                    margin-top: 36px;
+                    width: 150px;
+                    height: 150px;
+                }
+                span {
+                    display: block;
+                    font-size: 12px;
+                }
+                i {
+                    display: block;
+                    margin-top: 5px;
+                }
+                .money {
+                    color: #cf0a2c;
+                    font-size: 16px;
+                    font-weight: bold;
+                }
+                .more {
+                    border: 1px solid skyblue;
+                    border-radius: 10px;
+                    color: lightblue;
+                    font-size: 12px;
+                    padding: 0 5px;
+                }
+            }
+            li:hover {
+                box-shadow: 0px 8px 16px #eee;
+            }
+        }
+    }
+}

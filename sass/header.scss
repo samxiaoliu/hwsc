@@ -1,0 +1,172 @@
+@mixin navIcon($x, $y) {
+    content: '';
+    background: url('../img/icon-common.svg') no-repeat;
+    position: absolute;
+    top: 10px;
+    right: 5px;
+    display: block;
+    width: 14px;
+    height: 14px;
+    background-position: $x $y;
+}
+
+@mixin footerIcon($x,
+$y) {
+    content: '';
+    background: url('../img/icon1.svg') no-repeat;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-position: $x $y;
+}
+
+.container {
+    height: 36px;
+    background: #2e2828;
+}
+
+#nav {
+    width: 1200px;
+    height: 36px;
+    background: #2e2828;
+    margin: 0 auto;
+    .nav_left {
+        float: left;
+        span {
+            float: left;
+            display: block;
+            padding: 0 8px;
+            position: relative;
+            a {
+                color: #afafaf;
+                font-size: 12px;
+                height: 36px;
+                line-height: 36px;
+                cursor: pointer;
+            }
+            a:hover {
+                color: white;
+            }
+            a:before {
+                content: '';
+                width: 1px;
+                height: 10px;
+                background: #414141;
+                position: absolute;
+                top: 13px;
+                left: 0;
+                display: block;
+            }
+        }
+        .borderless:before {
+            display: none;
+        }
+        .arrow {
+            padding-right: 10px;
+        }
+        .arrow a {
+            padding-right: 15px;
+        }
+        .arrow i {
+            @include navIcon(-71px,
+            0);
+        }
+        .arrow:hover i {
+            @include navIcon(-85px,
+            0);
+        }
+        .arrow:hover {
+            background: white;
+        }
+        .arrow:hover a {
+            color: red;
+            padding-right: 15px;
+        }
+        .arrow:hover a:before {
+            display: none;
+        }
+    }
+    .nav_right {
+        float: right;
+        span {
+            float: left;
+            display: block;
+            padding: 0 8px;
+            position: relative;
+            a {
+                color: #afafaf;
+                font-size: 12px;
+                height: 36px;
+                line-height: 36px;
+                cursor: pointer;
+            }
+            a:hover {
+                color: white;
+            }
+            a:before {
+                content: '';
+                width: 1px;
+                height: 10px;
+                background: #414141;
+                position: absolute;
+                top: 13px;
+                left: 0;
+                display: block;
+            }
+        }
+        .borderless:before {
+            display: none;
+        }
+        .arrow {
+            padding-right: 10px;
+        }
+        .cart {
+            padding-left: 10px;
+        }
+        .arrow a {
+            padding-right: 15px;
+        }
+        .cart a {
+            padding-left: 15px;
+        }
+        .arrow i {
+            @include navIcon(-71px,
+            0);
+        }
+        .arrow:hover i {
+            @include navIcon(-85px,
+            0);
+        }
+        .arrow:hover,
+        .cart:hover {
+            background: white;
+        }
+        .arrow:hover a,
+        .cart:hover a {
+            color: red;
+        }
+        .arrow:hover a:before,
+        .cart:hover a:before {
+            display: none;
+        }
+        .cart i {
+            @include navIcon(-96px,
+            0);
+            width: 20px;
+            height: 20px;
+            top: 7px;
+            left: 0;
+        }
+        .cart:hover i {
+            @include navIcon(-115px,
+            0);
+            width: 20px;
+            height: 20px;
+            top: 7px;
+            left: 0;
+        }
+    }
+}
