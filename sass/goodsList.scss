@@ -1,7 +1,18 @@
+.footer_div {
+    #footer {
+        background: #fff;
+        .footer_inner {
+            background: #fff;
+        }
+    }
+}
+
 #main {
-    min-width: 1200px;
+    // min-width: 1200px;
     background: #f9f9f9;
     .main_wrap {
+        width: 1200px;
+        margin: 0 auto;
         font-size: 12px;
         p {
             padding: 15px 0;
@@ -88,6 +99,9 @@
                     font-size: 12px;
                     padding: 0 5px;
                 }
+            }
+            li:nth-of-type(1) {
+                margin-left: 0;
             }
             li:hover {
                 box-shadow: 0px 8px 16px #eee;

@@ -1,0 +1,116 @@
+@mixin navIcon($x, $y) {
+    content: '';
+    background: url('../img/icon-common.svg') no-repeat;
+    position: absolute;
+    top: 10px;
+    right: 5px;
+    display: block;
+    width: 14px;
+    height: 14px;
+    background-position: $x $y;
+}
+
+@mixin footerIcon($x,
+$y) {
+    content: '';
+    background: url('../img/icon1.svg') no-repeat;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-position: $x $y;
+}
+
+.container2 {
+    height: 74px;
+    background: white;
+}
+
+#search {
+    height: 41px;
+    padding: 18px 0;
+    width: 1200px;
+    margin: 0 auto;
+    #search_left {
+        float: left;
+        a {
+            display: inline-block;
+            height: 100%;
+            line-height: 41px;
+            font-size: 16px;
+        }
+        .logo {
+            width: 205px;
+            height: 36px;
+            margin-right: 34px;
+        }
+        .a {
+            width: 74px;
+            margin-right: 20px;
+            vertical-align: middle;
+        }
+        .word {
+            margin-right: 24px;
+        }
+        .word:hover {
+            color: red;
+        }
+    }
+    #search_right {
+        float: right;
+        position: relative;
+        .input_a1 {
+            position: absolute;
+            top: 10px;
+            right: 100px;
+        }
+        .input_a2 {
+            position: absolute;
+            top: 10px;
+            right: 50px;
+        }
+        .input_a1:hover,
+        .input_a2:hover {
+            color: black;
+        }
+        input {
+            width: 205px;
+            height: 30px;
+            line-height: 41px;
+            border-radius: 15px;
+            background: #eee;
+            padding-left: 20px;
+            color: black;
+            padding-right: 32px;
+        }
+        input:focus+.input_a1 {
+            display: none;
+        }
+        input:focus+.input_a1+.input_a2 {
+            display: none;
+        }
+        i {
+            @include navIcon(-140px,
+            0);
+            width: 20px;
+            height: 20px;
+            top: 5px;
+            right: 10px;
+        }
+    }
+    #search_right:hover {
+        input {
+            border: 1px solid #ccc;
+        }
+        i {
+            @include navIcon(-160px,
+            0);
+            width: 20px;
+            height: 20px;
+            top: 5px;
+            right: 10px;
+        }
+    }
+}

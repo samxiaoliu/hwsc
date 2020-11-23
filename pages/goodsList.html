@@ -9,37 +9,17 @@
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/footer.css">
     <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/search.css">
     <link rel="stylesheet" href="./css/goodsList.css">
 </head>
 
 <body>
     <div class="header_div"></div>
 
-    <div id="header_logo">
-        <div class="logo_wrap container">
-            <div class="left">
-                <img src="../img/logo.png" alt="华为商城" class="m1">
-                <a href="#"><img src="../img/a.png" class="m2"></a>
-                <a href="#"><img src="../img/a1.png" class="m3"></a>
-                <span>
-                    <a href="#">荣耀专区</a>
-                </span>
-                <span><a href="#"> P40系列</a></span>
-                <span><a href="#">荣耀30</a> </span>
-                <span><a href="#">智能家居</a> </span>
-            </div>
-            <div class="right">
-                <input type="text" class="search">
-                <a href="#" class="m40">Mate40 系列</a>
-                <a href="#" class="r30">荣耀30</a>
-                <input type="submit" class="sub" value=" ">
-                <span></span>
-            </div>
-        </div>
-    </div>
+    <div class="search_div"></div>
 
     <div id="main">
-        <div class="main_wrap container">
+        <div class="main_wrap">
             <p>首页<i>></i> 笔记本<i>></i>华为MateBook X系列</p>
 
             <div class="main_list">
@@ -84,89 +64,6 @@
 
         </div>
     </div>
-
-    <!-- <div id="footer">
-        <div class="footer_wrap container">
-            <ul class="up">
-                <li>
-                    <span class="one"></span><a href="#">百强企业 品质保证</a>
-                </li>
-                <li>
-                    <span class="two"></span><a href="#">7天退货 15天换货</a>
-                </li>
-                <li class="li_three">
-                    <span class="three"></span><a href="#">48元起免运费</a>
-                </li>
-                <li class="li_four">
-                    <span class="four"></span><a href="#">200家服务店 全国联保</a>
-                </li>
-            </ul>
-
-            <div class="down">
-
-                <dl>
-                    <dt>购物相关</dt>
-                    <dd>购物指南</dd>
-                    <dd>配送方式</dd>
-                    <dd>支付方式</dd>
-                    <dd>常见问题</dd>
-                </dl>
-
-                <dl>
-                    <dt>保修与退换货</dt>
-                    <dd>购物指南</dd>
-                    <dd>配送方式</dd>
-                    <dd>支付方式</dd>
-                    <dd>常见问题</dd>
-                    <dd>保修状态查询</dd>
-                </dl>
-                <dl>
-                    <dt>维修与技术支持</dt>
-                    <dd>预约维修</dd>
-                    <dd>手机寄修</dd>
-                    <dd>配件价格查询</dd>
-                    <dd>上门服务</dd>
-                </dl>
-                <dl>
-                    <dt>特色服务</dt>
-                    <dd>购物指南</dd>
-                    <dd>配送方式</dd>
-                    <dd>支付方式</dd>
-                    <dd>常见问题</dd>
-                </dl>
-                <dl>
-                    <dt>关于我们</dt>
-                    <dd>公司介绍</dd>
-                    <dd>华为商城简介</dd>
-                    <dd>荣耀零售店</dd>
-                    <dd>商家中心</dd>
-                </dl>
-                <dl>
-                    <dt>友情链接</dt>
-                    <dd>华为集团</dd>
-                    <dd>荣耀官网</dd>
-                    <dd>花粉俱乐部</dd>
-                </dl>
-                <span></span>
-                <div class="right">
-                    <p class="phone">950805</p>
-                    <p>7x24小时客服热线（仅收市话费）</p>
-                    <a href="#">在线客服</a>
-                    <p>关注Vmall：</p>
-                </div>
-            </div>
-
-            <div class="foot">
-                <p><img src="../img/foot.png" alt=""></p>
-                <span>
-                    <p class="p1"> 华为集团|华为CBG官网 │ 荣耀官网 │ 花粉俱乐部 │ 华为应用市场 │ EMUI | 华为终端云空间 │ 开发者联盟 │ 华为商城手机版 │ 网站地图</p>
-                    <p class="p2"> 隐私声明 服务协议 COOKIES Copyight @2012-2020 华为终端有限公司 版权所有 粤ICP备19015064号|粤公网安备 44190002003939号</br>增值电信业务经营许可证:粤B2-20190762 | 备案主体编号:44201919072182</p>
-                </span>
-            </div>
-        </div>
-
-
-    </div> -->
     <div class="footer_div"></div>
 </body>
 
@@ -177,6 +74,7 @@
     $(function() {
         $('.header_div').load('header.html');
         $('.footer_div').load('footer.html');
+        $('.search_div').load('search.html')
     })
 </script>
 

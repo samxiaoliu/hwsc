@@ -5,47 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
-    <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/search.css">
     <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/index.css">
 </head>
 
 <body>
     <div id="header"></div>
-
-    <div class="container2">
-        <div id="search">
-            <div id="search_left">
-                <a href="#">
-                    <img src="../img/logo.png" alt="" class='logo'>
-                </a>
-                <a href="#">
-                    <img src="../img/a.png" alt="" class='a'>
-                </a>
-                <a href="#">
-                    <img src="../img/a1.png" alt="" class='a'>
-                </a>
-                <a href="" class="word">
-                  P40系列
-                </a>
-                <a href="" class="word">
-                  荣耀30
-                </a>
-                <a href="" class="word">
-                  智能家居
-                </a>
-            </div>
-
-            <div id="search_right">
-                <input type="text">
-                <a href="#" class="input_a1">Mate40 系列</a>
-                <a href="#" class="input_a2">荣耀30</a>
-                <i></i>
-            </div>
-        </div>
-    </div>
+    <div class="search_div"></div>
 
     <div id="banner">
         <div class="banner_inner">
@@ -318,6 +287,7 @@
         $(function() {
             $('#header').load('header.html')
             $('.footer_div').load('footer.html')
+            $('.search_div').load('search.html')
         })
     </script>
 </body>

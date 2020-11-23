@@ -180,9 +180,10 @@ $y) {
 }
 
 .mask {
-    margin-top: -40px;
+    width: 1920px;
     display: block;
-    height: 72px;
+    margin: 0 auto;
+    margin-top: -40px;
     img {
         width: 100%;
     }
@@ -195,7 +196,7 @@ $y) {
     width: 1200px;
     height: 88px;
     margin: 0 auto;
-    margin-top: -80px;
+    margin-top: -70px;
     background: white;
     border-radius: 10px;
     text-align: center;
@@ -251,12 +252,12 @@ $y) {
         }
     }
     .login_list {
-        width: 55%;
+        width: 62%;
         ul {
             display: flex;
             justify-content: space-around;
             li {
-                width: 9%;
+                width: 10%;
                 text-align: center;
                 overflow: hidden;
                 position: relative;
@@ -303,7 +304,7 @@ $y) {
         }
     }
     .login_right {
-        width: 25%;
+        width: 18%;
         height: 100%;
         border-left: 1px solid #eee;
         .gg {
@@ -318,7 +319,7 @@ $y) {
         .right_list {
             height: 42px;
             display: flex;
-            justify-content: space-around;
+            justify-content: space-evenly;
             span {
                 line-height: 42px;
                 font-size: 12px;
