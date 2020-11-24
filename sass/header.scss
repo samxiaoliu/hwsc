@@ -254,7 +254,6 @@ $y) {
                 z-index: 2;
                 width: 460px;
                 border-radius: 10px;
-                padding: 20px 0px;
                 display: none;
                 box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.05);
                 dt {
@@ -307,26 +306,47 @@ $y) {
                 dt:nth-last-of-type(1) {
                     border-bottom: none;
                 }
+                .total_price1 {
+                    width: 460px;
+                    height: 60px;
+                    background: #ccc;
+                    z-index: 2;
+                    width: 460px;
+                    padding: 10px 20px;
+                    box-sizing: border-box;
+                    .price_amount {
+                        float: left;
+                        font-size: 14px;
+                    }
+                    p:nth-of-type(2) {
+                        margin-left: -3px;
+                        margin-top: 3px;
+                        font-size: 22px;
+                        color: #ca141d;
+                        float: left;
+                        font-weight: 600;
+                    }
+                    .cart_total_price {
+                        font-size: 22px;
+                        color: #ca141d;
+                        margin-top: 3px;
+                        padding: unset;
+                        font-weight: 600;
+                    }
+                    .pay_button1 {
+                        span {
+                            width: 160px;
+                            height: 40px;
+                            text-align: center;
+                            line-height: 40px;
+                            font-size: 18px;
+                            color: white;
+                        }
+                        float: right;
+                        background: #ca141d;
+                    }
+                }
             }
-            // .total_price1 {
-            //     width: 460px;
-            //     height: 60px;
-            //     position: absolute;
-            //     top: 36px;
-            //     right: 0;
-            //     background: white;
-            //     z-index: 2;
-            //     width: 460px;
-            //     .price_amount {
-            //         float: left;
-            //     }
-            //     .pay_button1 {
-            //         float: right;
-            //         width: 200px;
-            //         height: 30px;
-            //         background: red;
-            //     }
-            // }
         }
         .arrow a {
             padding-right: 15px;
@@ -347,9 +367,12 @@ $y) {
             background: white;
         }
         .cart:hover {
-            .cart_extend {
+            .cart_empty {
                 display: block;
             }
+        }
+        .cart:hover .cart_good_list {
+            display: block;
         }
         .same_arrow_top:hover {
             .more_list {
