@@ -117,12 +117,12 @@ $y) {
 
 #banner {
     height: 550px;
-    background: url('../img/banner12.png') no-repeat center;
+    // background: url('../img/banner12.png') no-repeat center;
     border: 1px solid transparent;
-    .banner_inner {
-        width: 1200px;
-        margin: 0 auto;
-    }
+    margin: 0 auto;
+    // .banner_inner {
+    //     width: 1200px;
+    // }
     .good_list {
         width: 200px;
         height: 440px;
@@ -190,6 +190,7 @@ $y) {
 }
 
 #login {
+    position: relative;
     z-index: 2;
     display: flex;
     justify-content: space-between;

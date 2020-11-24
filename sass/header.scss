@@ -40,17 +40,17 @@ $y) {
             display: block;
             padding: 0 8px;
             position: relative;
-            a {
+            a:nth-of-type(1) {
                 color: #afafaf;
                 font-size: 12px;
                 height: 36px;
                 line-height: 36px;
                 cursor: pointer;
             }
-            a:hover {
+            a:nth-of-type(1):hover {
                 color: white;
             }
-            a:before {
+            a:nth-of-type(1):before {
                 content: '';
                 width: 1px;
                 height: 10px;
@@ -66,8 +66,31 @@ $y) {
         }
         .arrow {
             padding-right: 10px;
+            position: relative;
+            .more_list {
+                position: absolute;
+                top: 36px;
+                right: 0;
+                width: 119px;
+                background: white;
+                box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.05);
+                border-radius: 0 0 10px 10px;
+                display: none;
+                dt {
+                    height: 40px;
+                    display: block;
+                    line-height: 40px;
+                    text-align: center;
+                    color: #afafaf;
+                    font-size: 12px;
+                    cursor: pointer;
+                }
+                dt:hover {
+                    color: #ca141d;
+                }
+            }
         }
-        .arrow a {
+        .arrow a:nth-child(1) {
             padding-right: 15px;
         }
         .arrow i {
@@ -80,12 +103,15 @@ $y) {
         }
         .arrow:hover {
             background: white;
+            .more_list {
+                display: block;
+            }
         }
-        .arrow:hover a {
-            color: red;
+        .arrow:hover a:nth-of-type(1) {
+            color: #ca141d;
             padding-right: 15px;
         }
-        .arrow:hover a:before {
+        .arrow:hover a:nth-of-type(1):before {
             display: none;
         }
     }
@@ -123,8 +149,184 @@ $y) {
         .arrow {
             padding-right: 10px;
         }
+        .same_arrow_top {
+            position: relative;
+            .more_list {
+                position: absolute;
+                top: 36px;
+                right: 0;
+                width: 119px;
+                background: white;
+                box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.05);
+                border-radius: 0 0 10px 10px;
+                display: none;
+                dt {
+                    height: 40px;
+                    display: block;
+                    line-height: 40px;
+                    text-align: center;
+                    color: #afafaf;
+                    font-size: 12px;
+                    cursor: pointer;
+                }
+                dt:hover {
+                    color: #ca141d;
+                }
+            }
+        }
+        .web_nav_list {
+            position: relative;
+            .web_nav {
+                display: none;
+                position: absolute;
+                top: 36px;
+                right: 0;
+                width: 400px;
+                background: white;
+                z-index: 2;
+                padding: 20px;
+                border-radius: 0 0 10px 10px;
+                box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.05);
+                dl {
+                    line-height: 1.5rem;
+                    margin-right: 20px;
+                    float: left;
+                    cursor: pointer;
+                    dt {
+                        color: #afafaf;
+                    }
+                    dt:hover {
+                        color: #ca141d;
+                    }
+                    dt:hover dt:nth-of-type(1) {
+                        color: black;
+                    }
+                    dt:nth-of-type(1) {
+                        font-size: 16px;
+                        color: black;
+                        margin-bottom: 10px;
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+        .web_nav_list:hover {
+            .web_nav {
+                display: block;
+            }
+        }
         .cart {
             padding-left: 10px;
+            position: relative;
+            .cart_empty {
+                position: absolute;
+                top: 36px;
+                right: 0;
+                padding: 50px;
+                background: white;
+                z-index: 2;
+                width: 350px;
+                border-radius: 10px;
+                display: none;
+                box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.05);
+                dt:nth-of-type(1) {
+                    @include navIcon(-262px,
+                    0);
+                    width: 100px;
+                    height: 100px;
+                    top: 25%;
+                    left: 40%;
+                    right: unset;
+                }
+                dt:nth-of-type(2) {
+                    margin-top: 120px;
+                    font-size: 14px;
+                    text-align: center;
+                    color: #afafaf;
+                }
+            }
+            .cart_good_list {
+                overflow: hidden;
+                position: absolute;
+                top: 36px;
+                right: 0;
+                background: white;
+                z-index: 2;
+                width: 460px;
+                border-radius: 10px;
+                padding: 20px 0px;
+                display: none;
+                box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.05);
+                dt {
+                    display: flex;
+                    padding-top: 20px;
+                    padding-bottom: 20px;
+                    border-bottom: 1px solid #eee;
+                    input[type='checkbox'] {
+                        margin: 23px 16px 0 12px;
+                        float: left;
+                        border-radius: 50%;
+                        color: #ca141d;
+                    }
+                    img {
+                        width: 64px;
+                        height: 64px;
+                        float: left;
+                    }
+                    .cart_info {
+                        float: left;
+                        width: 298px;
+                        padding: 0 0 0 9px;
+                        .item_title {
+                            float: left;
+                            width: 298px;
+                            padding: 0 0 0 9px;
+                            height: 20px;
+                            line-height: 20px;
+                            color: #a4a4a4;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                            font-size: 14px;
+                            color: #333;
+                        }
+                        .item_price {
+                            margin-top: 20px;
+                            font-size: 14px;
+                            float: right;
+                            text-align: right;
+                            width: 298px;
+                            padding-left: 9px;
+                            p {
+                                margin-left: 10px;
+                                float: right;
+                            }
+                        }
+                    }
+                }
+                dt:nth-last-of-type(1) {
+                    border-bottom: none;
+                }
+            }
+            // .total_price1 {
+            //     width: 460px;
+            //     height: 60px;
+            //     position: absolute;
+            //     top: 36px;
+            //     right: 0;
+            //     background: white;
+            //     z-index: 2;
+            //     width: 460px;
+            //     .price_amount {
+            //         float: left;
+            //     }
+            //     .pay_button1 {
+            //         float: right;
+            //         width: 200px;
+            //         height: 30px;
+            //         background: red;
+            //     }
+            // }
         }
         .arrow a {
             padding-right: 15px;
@@ -144,9 +346,20 @@ $y) {
         .cart:hover {
             background: white;
         }
+        .cart:hover {
+            .cart_extend {
+                display: block;
+            }
+        }
+        .same_arrow_top:hover {
+            .more_list {
+                display: block;
+                z-index: 2;
+            }
+        }
         .arrow:hover a,
         .cart:hover a {
-            color: red;
+            color: #ca141d;
         }
         .arrow:hover a:before,
         .cart:hover a:before {
