@@ -87,7 +87,8 @@
             margin-bottom: 26px;
             box-sizing: border-box;
         }
-        input[value='登录'] {
+        .log_in,
+        .sign {
             height: auto;
             background: #CA141D;
             color: white;
@@ -97,8 +98,18 @@
             line-height: 18px;
             width: 300px;
             box-sizing: content-box;
-            margin-top: 60px;
+            margin-top: 50px;
             cursor: pointer;
+        }
+        .sign {
+            margin-top: 0;
+            background-color: #5cb85c;
+        }
+        .log_in:hover {
+            background-color: #df4b53;
+        }
+        .sign:hover {
+            background-color: #7dc77d;
         }
         p {
             text-align: center;
@@ -140,7 +151,10 @@
 }
 
 .footer {
-    margin-top: 100px;
+    position: absolute;
+    bottom: -104px;
+    left: 0;
+    right: 0;
     height: 110px;
     background: rgba(0, 0, 0, 0.05);
     .footer_inner {

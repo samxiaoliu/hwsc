@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>首页</title>
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/reset1.css">
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/search.css">
     <link rel="stylesheet" href="./css/footer.css">
@@ -18,7 +18,12 @@
     <div class="search_div"></div>
 
     <div id="banner">
+        <ul class="banner_list">
+            <li class="banner_first"></li>
+            <li class="banner_second"></li>
+        </ul>
         <div class="banner_inner">
+
             <ul class="good_list">
                 <li>手机
                     <i></i>
@@ -98,16 +103,20 @@
                 </ul>
             </ul>
 
-
+            <span class="left_arrow"></span>
+            <span class="right_arrow"></span>
+            <ul class="list_dots">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
         </div>
-
-
-        <!-- </div> -->
+        <span class="mask"></span>
     </div>
 
-    <span class="mask">
-      <!-- <img src="../img/mask.png" alt=""> -->
-    </span>
+
 
     <div id="login">
         <div class="login_form">
@@ -213,76 +222,8 @@
         <div class="hot_left">
             <img src="../img/hot_left.png" alt="">
         </div>
-        <ul class="hot_right">
-            <li>
-                <span class="title">新品上市</span>
-                <img src="../img/hot_right.png" alt="">
-                <p class="name">HUAWEl Mate 40 Pro+ 5G</p>
-                <p class="feature">享多重权益</p>
-                <p class="price">￥8999</p>
-            </li>
-
-            <li>
-                <span class="title">新品上市</span>
-                <img src="../img/hot_right.png" alt="">
-                <p class="name">HUAWEl Mate 40 Pro+ 5G</p>
-                <p class="feature">享多重权益</p>
-                <p class="price">￥8999</p>
-            </li>
-
-            <li>
-                <span class="title">新品上市</span>
-                <img src="../img/hot_right.png" alt="">
-                <p class="name">HUAWEl Mate 40 Pro+ 5G</p>
-                <p class="feature">享多重权益</p>
-                <p class="price">￥8999</p>
-            </li>
-
-            <li>
-                <span class="title">新品上市</span>
-                <img src="../img/hot_right.png" alt="">
-                <p class="name">HUAWEl Mate 40 Pro+ 5G</p>
-                <p class="feature">享多重权益</p>
-                <p class="price">￥8999</p>
-            </li>
-
-            <li>
-                <span class="title">新品上市</span>
-                <img src="../img/hot_right.png" alt="">
-                <p class="name">HUAWEl Mate 40 Pro+ 5G</p>
-                <p class="feature">享多重权益</p>
-                <p class="price">￥8999</p>
-            </li>
-
-            <li>
-                <span class="title">新品上市</span>
-                <img src="../img/hot_right.png" alt="">
-                <p class="name">HUAWEl Mate 40 Pro+ 5G</p>
-                <p class="feature">享多重权益</p>
-                <p class="price">￥8999</p>
-            </li>
-
-            <li>
-                <span class="title">新品上市</span>
-                <img src="../img/hot_right.png" alt="">
-                <p class="name">HUAWEl Mate 40 Pro+ 5G</p>
-                <p class="feature">享多重权益</p>
-                <p class="price">￥8999</p>
-            </li>
-
-            <li>
-                <span class="title">新品上市</span>
-                <img src="../img/hot_right.png" alt="">
-                <p class="name">HUAWEl Mate 40 Pro+ 5G</p>
-                <p class="feature">享多重权益</p>
-                <p class="price">￥8999</p>
-            </li>
-        </ul>
+        <ul class="hot_right"></ul>
     </div>
-
-
-
-
 
     <ul class="contact_list">
         <li class="cart">
@@ -306,9 +247,8 @@
     <div class="footer_div"></div>
 
     <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js">
-    </script>
     <script src="./js/index.js"></script>
+    <script src="./js/banner.js"></script>
     <script>
         $(function() {
             $('#header').load('header.html')
