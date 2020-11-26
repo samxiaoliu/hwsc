@@ -1,15 +1,31 @@
 $(function() {
     if (localStorage.getItem('username')) {
         $('.login_form_right .user').html('欢迎回来 ' + localStorage.getItem('username'))
+            // $.ajax({
+            //     url: '../data/user.php',
+            //     type: 'post',
+            //     dataType: 'json',
+            //     data: {
+            //         username: localStorage.getItem('username'),
+            //         request_type: 'getInfo'
+            //     },
+            //     success: function(result) {
+            //         render_cart(result)
+            //     },
+            //     error: function(err) {
+            //         console.log(err)
+            //     }
+            // })
     }
 
-    $.ajax({
+    let myajax = $.ajax({
         url: '../data/index_data.json',
         type: 'get',
         dataType: 'json',
         cache: false,
         success: function(json) {
             hot_rightData(json)
+                // goodsData = json
         },
         error: function(err) {
             console.log(err)
@@ -38,4 +54,6 @@ $(function() {
             }
         })
     }
+
+
 })

@@ -25,12 +25,43 @@
         display: flex;
         .left {
             width: 450px;
+            position: relative;
             // border: 1px solid #ccc;
             .box_img {
                 width: 450px;
                 height: 450px;
+                position: relative;
                 img {
                     width: 100%;
+                }
+                #mask {
+                    position: absolute;
+                    cursor: move;
+                    display: none;
+                    top: 0;
+                    left: 0;
+                    width: 225px;
+                    height: 225px;
+                    border: 1px solid #ddd;
+                    background-color: rgba(255, 255, 255, 0.5);
+                }
+            }
+            .max_img {
+                width: 450px;
+                height: 450px;
+                position: absolute;
+                top: -2px;
+                left: 462px;
+                border: 2px solid #ddd;
+                background-color: #fff;
+                overflow: hidden;
+                display: none;
+                img {
+                    width: 900px;
+                    height: 900px;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
                 }
             }
             .i_list {

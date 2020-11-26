@@ -14,6 +14,16 @@ $num = count($data);
 
 $found = false;
 
+if ($request_type == "getInfo") {
+    for ($i = 0; $i < $num; $i++) {
+        if ($username == $data[$i]["username"]) {
+            $result = json_encode($data[$i]['cart']);
+            echo $result;
+            return;
+        }
+    }
+}
+
 if ($request_type == "update_cart") {
     for ($i=0; $i < $num; $i++) {
         if ($username == $data[$i]["username"]) {

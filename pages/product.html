@@ -27,7 +27,11 @@
 
             <div class="left">
                 <div class="box_img">
-                    <img src="../img/pro_3.png" alt="">
+                    <img src="../img/pro_2.png" alt="">
+                    <span id="mask"></span>
+                </div>
+                <div class="max_img">
+                    <img src="../img/pro_2.png" alt="" class="big_img">
                 </div>
                 <div class="i_list">
                     <i><</i>
@@ -263,10 +267,18 @@
 
     <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
     <script src="../js/product.js"></script>
+    <script src="../js/FDJ_obj.js"></script>
     <script>
         $(function() {
             $('.header_div').load('header.html');
             $('.footer_div').load('footer.html');
+
+            var obj = new Fdj({
+                small_img: '.box_img',
+                large_box: '.max_img',
+                large_img: '.big_img',
+                mask: '#mask'
+            })
         })
     </script>
 </body>

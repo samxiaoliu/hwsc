@@ -45,7 +45,7 @@
                     <span class="delete_title">操作</span>
                 </div>
 
-                <div class="goods_list">
+                <!-- <div class="goods_list">
                     <input type="checkbox">
                     <img src="../img/goods.png" alt="" class="goods_img">
                     <p class="describe">
@@ -64,66 +64,66 @@
                             <p>您确定要删除该商品?</p>
                             <div class="confirm_button">
                                 <span class="yes">是</span>
-                        <span class="no">否</span>
+                                <span class="no">否</span>
+                            </div>
+                        </span>
                     </div>
-                    </span>
+                </div> -->
+            </div>
+
+
+            <div id="cart_bottom">
+                <div class="input_checkbox">
+                    <input type="checkbox">
+                    <span>全选</span>
                 </div>
 
+                <span class="bottom_delete">删除</span>
+
+                <span class="pay_button">立即结算</span>
+
+                <div class="pay_module">
+                    <p class="cal_total">
+                        总计：
+                        <span class="money"> ￥ 0.00</span>
+                    </p>
+                    <p class="amount_choose">已选择
+                        <span class="amount"> 0 </span> 件商品
+                    </p>
+                </div>
             </div>
         </div>
+        <!-- </div>
+    </div> -->
 
-
-        <div class="cart_bottom">
-            <div class="input_checkbox">
-                <input type="checkbox">
-                <span>全选</span>
-            </div>
-
-            <span class="bottom_delete">删除</span>
-
-            <span class="pay_button">立即结算</span>
-
-            <div class="pay_module">
-                <p class="cal_total">
-                    总计：
-                    <span class="money"> ￥ 0.00</span>
+        <ul class="contact_list">
+            <li class="cart">
+                <p>
+                    购物车
                 </p>
-                <p class="amount_choose">已选择
-                    <span class="amount"> 0 </span> 件商品
-                </p>
-            </div>
-        </div>
-    </div>
-    </div>
-    </div>
+                <i><em class="number_item">1</em></i>
+            </li>
+            <li class="customer">
+                <p>在线客服</p>
+                <i></i>
+            </li>
+            <li class="help">
+                <p>自助服务</p>
+                <i></i>
+            </li>
+        </ul>
 
-    <ul class="contact_list">
-        <li class="cart">
-            <p>
-                购物车
-            </p>
-            <i><em class="number_item">1</em></i>
-        </li>
-        <li class="customer">
-            <p>在线客服</p>
-            <i></i>
-        </li>
-        <li class="help">
-            <p>自助服务</p>
-            <i></i>
-        </li>
-    </ul>
-
-    <div class="footer_div"></div>
+        <div class="footer_div"></div>
 
 
-    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
-    <script>
-        $(function() {
-            $('#header').load('header.html');
-            $('.footer_div').load('footer.html');
-        })
-    </script>
+        <script src="http://libs.baidu.com/jquery/2.0.3/jquery.min.js"></script>
+        <script src="../js/cart.js"></script>
+        <script>
+            $(function() {
+                $('#header').load('header.html');
+                $('.footer_div').load('footer.html');
+            })
+        </script>
 </body>
 
 </html>
