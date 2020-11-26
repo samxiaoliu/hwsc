@@ -68,6 +68,7 @@ $y) {
             padding-right: 10px;
             position: relative;
             .more_list {
+                z-index: 2;
                 position: absolute;
                 top: 36px;
                 right: 0;

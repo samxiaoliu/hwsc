@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>首页</title>
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="./css/reset1.css">
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/search.css">
@@ -122,7 +121,7 @@
         <div class="login_form">
             <img src="../img/user.png" alt="">
             <div class="login_form_right">
-                <p>您好! 请 <span class="login">登录</span> / <span class="signin">注册</span></p>
+                <p class="user">您好! 请 <span class="login">登录</span> / <span class="signin">注册</span></p>
                 <div class="login_form_bottom">
                     <p>新人福利</p>
                     <p>会员频道</p>
@@ -254,27 +253,6 @@
             $('#header').load('header.html')
             $('.footer_div').load('footer.html')
             $('.search_div').load('search.html')
-
-            var mySwiper = new Swiper('.swiper-container', {
-                direction: 'horizontal', // 垂直切换选项
-                loop: true, // 循环模式选项
-                effect: 'fade',
-                speed: 1000,
-                autoplay: {
-                    delay: 5000
-                },
-
-                // 如果需要分页器
-                pagination: {
-                    el: '.swiper-pagination',
-                },
-
-                // 如果需要前进后退按钮
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
-                },
-            })
         })
     </script>
 </body>
