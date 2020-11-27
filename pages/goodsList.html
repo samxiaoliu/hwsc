@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>商品详情</title>
+    <link rel="stylesheet" href="./css/reset1.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/search.css">
+    <link rel="stylesheet" href="./css/goodsList.css">
+</head>
+
+<body>
+    <div class="header_div"></div>
+
+    <div class="search_div"></div>
+
+    <div id="main">
+        <div class="main_wrap">
+            <p>首页<i>></i> 笔记本<i>></i>华为MateBook X系列</p>
+
+            <div class="main_list">
+                <span>
+                    分类：<a href="#" class="a1">笔记本</a>
+                </span>
+                <span>
+                    价格区间：<a href="#" class="a2">0-7989</a>
+                </span>
+                <span class="last">
+                    排序：<i></i>
+                        <a href="#">综合</a>
+                        <a href="#">最新</a>
+                        <a href="#">热度</a>
+                        <a href="#">价格</a>
+                </span>
+            </div>
+
+            <ul class="main2_list">
+                <!-- <li>
+                    <img src="../img/computer.png" alt="">
+                    <i>HUAWEI Mate 40 Pro+ 5G</i>
+                    <a href="#" class="money">￥8999起</a>
+                    <a href="#" class="more">多款可选</a>
+                    <span>2229人评价 98%好评</span>
+                </li> -->
+            </ul>
+        </div>
+    </div>
+    <div class="footer_div"></div>
+</body>
+
+
+
+<script src="http://libs.baidu.com/jquery/2.0.3/jquery.min.js"></script>
+<script src="./js/goodsList.js"></script>
+<script>
+    $(function() {
+        $('.header_div').load('header.html');
+        $('.footer_div').load('footer.html');
+        $('.search_div').load('search.html')
+    })
+</script>
+
+</html>

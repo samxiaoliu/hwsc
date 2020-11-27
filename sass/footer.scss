@@ -1,0 +1,168 @@
+@mixin navIcon($x, $y) {
+    content: '';
+    background: url('../img/icon-common.svg') no-repeat;
+    position: absolute;
+    top: 10px;
+    right: 5px;
+    display: block;
+    width: 14px;
+    height: 14px;
+    background-position: $x $y;
+}
+
+@mixin footerIcon($x,
+$y) {
+    content: '';
+    background: url('../img/icon1.svg') no-repeat;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-position: $x $y;
+}
+
+#footer {
+    // position: absolute;
+    // bottom: 0;
+    // left: 0;
+    // right: 0;
+    // height: 407px;
+    margin-top: 20px;
+    background: #f9f9f9;
+    padding-bottom: 20px;
+    .footer_inner {
+        width: 1200px;
+        height: 407px;
+        background: #f9f9f9;
+        margin: 0 auto;
+        border: 1px solid transparent;
+        .footer_top {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+            height: 40px;
+            li {
+                width: 17%;
+                position: relative;
+                padding-left: 50px;
+                font-size: 18px;
+                line-height: 40px;
+                color: #3a3a3a;
+                cursor: pointer;
+            }
+            .icon1_1 i {
+                @include footerIcon(-74px,
+                0)
+            }
+            .icon1_2 i {
+                @include footerIcon(-114px,
+                0)
+            }
+            .icon1_3 i {
+                @include footerIcon(-154px,
+                0)
+            }
+            .icon1_4 i {
+                @include footerIcon(-194px,
+                0)
+            }
+        }
+        .footer_middle {
+            display: flex;
+            justify-content: space-between;
+            padding: 24px 0;
+            border: 1px solid rgb(229, 229, 229);
+            border-right: none;
+            border-left: none;
+            ul {
+                width: 13.33%;
+                li {
+                    font-size: 10px;
+                    color: #777;
+                    line-height: 1.4rem;
+                }
+                li:nth-of-type(1) {
+                    font-size: 14px;
+                    color: black;
+                    margin-bottom: 10px;
+                }
+            }
+            ul:nth-last-of-type(1) {
+                width: 278px;
+                border-left: 1px solid rgb(229, 229, 229);
+                .tel {
+                    font-size: 24px;
+                    font-weight: bolder;
+                    color: rgb(87, 87, 87);
+                    height: 36px;
+                    line-height: 36px;
+                    text-align: center;
+                    margin-bottom: 0;
+                }
+                .tel_content {
+                    text-align: center;
+                    font-size: 14px;
+                }
+                .tel_button {
+                    width: 170px;
+                    height: 34px;
+                    line-height: 34px;
+                    border: 1px solid #333;
+                    background: #333;
+                    border-radius: 17px;
+                    font-size: 14px;
+                    color: white;
+                    text-align: center;
+                    position: relative;
+                    margin: 10px auto;
+                    cursor: pointer;
+                    margin-top: 10px;
+                    padding-left: 15px;
+                    i {
+                        @include navIcon(-46px,
+                        -82px);
+                        top: 5px;
+                        left: 40px;
+                        width: 22px;
+                        height: 22px;
+                        color: white;
+                    }
+                }
+                .info_group {
+                    width: 250px;
+                    height: 24px;
+                    margin: 26px auto;
+                    margin-bottom: 0;
+                    text-align: center;
+                    font-size: 14px;
+                    color: black;
+                }
+            }
+        }
+        .footer_bottom {
+            width: 1200px;
+            display: flex;
+            margin: 28px auto;
+            margin-bottom: 0;
+            img {
+                width: 82px;
+                height: 20px;
+                padding-right: 20px;
+            }
+            div {
+                font-size: 12px;
+                width: 700px;
+                p:nth-of-type(1) {
+                    letter-spacing: 0.02rem;
+                }
+                p:nth-of-type(2) {
+                    padding-top: 10px;
+                    line-height: 1.5rem;
+                    color: #a4a4a4;
+                }
+            }
+        }
+    }
+}

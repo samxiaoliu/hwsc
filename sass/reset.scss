@@ -1,0 +1,94 @@
+html,
+body,
+ul,
+li,
+ol,
+dl,
+dd,
+dt,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+fieldset,
+legend,
+img,
+figure,
+figcaption {
+    margin: 0;
+    padding: 0;
+}
+
+body,
+html {
+    font: 16px Arial, "宋体" #ffffff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+b,
+strong {
+    font-weight: normal;
+    /*取消加粗*/
+    font-size: 100%;
+    /* 设置字号与父元素相同*/
+    color: #333;
+}
+
+img {
+    vertical-align: middle;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+em,
+i {
+    font-style: normal;
+    /*取消倾斜*/
+}
+
+a {
+    text-decoration: none;
+    color: #aaa;
+}
+
+a:hover {
+    color: white;
+}
+
+input {
+    outline: none;
+}
+
+table,
+td,
+input {
+    font-size: 12px;
+    padding: 0;
+}
+
+.clearfix {
+    *zoom: 1;
+    /*解决IE7以下版本的塌陷问题*/
+}
+
+.clearfix::after {
+    content: ' ';
+    display: block;
+    height: 0;
+    overflow: hidden;
+    clear: both;
+    visibility: hidden;
+}
